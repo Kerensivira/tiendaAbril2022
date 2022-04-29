@@ -1,11 +1,11 @@
+const URL_Offers = 'https://tiendadeviveres.herokuapp.com/ofertas'
 
+export const ShowProductsModalOffers = async(URL_Offers) => {
 
-export const ShowProductsModalOffers = async(endpoint) => {
-
-    const resp = await fetch(endpoint);
+    const resp = await fetch(URL_Offers);
     const data = await resp.json();
 
-    return data
+    return console.log (data)
 }
 
 

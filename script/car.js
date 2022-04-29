@@ -33,6 +33,8 @@ const showProductCompra = () => {
         `
     })
 
+    
+
     let total = productosCar.reduce((sum, value) => (typeof value.precioTotal == "number" ? sum + value.precioTotal : sum), 0)
     btnPago.textContent = "Pagar $" + total
 }

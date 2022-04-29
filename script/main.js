@@ -1,6 +1,6 @@
-const API_OFERTAS = 'https://tiendadeviveres.herokuapp.com/ofertas'
-const API_POPULARES = 'https://tiendadeviveres.herokuapp.com/populares'
-const API_UBICACIONES = 'https://tiendadeviveres.herokuapp.com/uicaciones'
+const API_OFERTAS = 'https://tiendadeviveres.herokuapp.com/ofertas/'
+const API_POPULARES = 'https://tiendadeviveres.herokuapp.com/populares/'
+const API_UBICACIONES = 'https://tiendadeviveres.herokuapp.com/uicaciones/'
 let productosCar = JSON.parse(localStorage.getItem('ProductosCarro')) || []
 let LSUbicacion = JSON.parse(localStorage.getItem('ubicacion')) || ""
 const oferta = document.getElementById('productOferta')
@@ -40,8 +40,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 export const addProductoCar = async (api, cantidad1) => {
     const producto = await getProducts(api)
 
-    const { id, nombre, precio, imagen } = producto
-    let precioTotal = precio * cantidad1
+    const { id, nombre, precio, precioFinal, imagen } = producto
+    //console.log(producto)
+    let precioTotal = precio ? precio * cantidad1 : precioFinal * cantidad1
     precioTotal = precioTotal.toFixed(2)
     const Producto = {
         id: id,
@@ -52,6 +53,8 @@ export const addProductoCar = async (api, cantidad1) => {
         cantidad: cantidad1,
         api: api
     }
+
+    console.log(productosCar)
 
     productosCar.unshift(Producto)
     localStorage.setItem('ProductosCarro', JSON.stringify(productosCar))

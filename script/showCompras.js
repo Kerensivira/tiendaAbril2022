@@ -41,9 +41,12 @@ export const showPopulares = (populares) => {
 
 // Mostrar la informacion del producto en el modal
 export const showModalProducto = (producto, api) => {
+    
     const productModal = document.querySelector('.modal-producto-datos')
     productModal.innerHTML = ""
-    const { nombre, precioInicial, precioFinal, imagen } = producto
+    
+    const { nombre, precio, precioFinal, imagen } = producto;
+    
     let cantidad = 1;
     productModal.innerHTML += `
     <div class="imagen-product">
@@ -51,7 +54,7 @@ export const showModalProducto = (producto, api) => {
     </div>
         <div class="informacion-product">
             <span>${nombre}</span>
-            <span>&#36; ${precioFinal}</span>
+            <span>&#36; ${precioFinal ? precioFinal : precio}</span>
             <p>Precios con IVA incluido</p>
             <div>
                 <h5 class="cantidad">Selecciona la cantidad que deseas</h5>
@@ -63,6 +66,7 @@ export const showModalProducto = (producto, api) => {
                 </div>
                 <div>
                     <button class="btnAgregarCar" id="btnAgregarCar">Agregar</button>
+
                 </div>
             </div>
         </div>
