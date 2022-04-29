@@ -5,15 +5,15 @@ export const showOfertas = (ofertas) => {
     const oferta = document.getElementById('productOferta')
     oferta.innerHTML = ""
     ofertas.forEach(element => {
-        const { id, nombre, precio, precioInicial, imagen } = element
+        const { id, nombre, precioFinal, precioInicial, imagen } = element
         const porcentaje = 100;
-        const descuento = Math.round(((precio - precioInicial) / precioInicial) * porcentaje);
+        const descuento = Math.round(((precioFinal - precioInicial) / precioInicial) * porcentaje);
         const product = document.createElement('div');
         product.innerHTML += `
         <span class="descuento">${descuento}%</span>
             <div class="product">
                 <img src="${imagen}" alt="${nombre}">
-                <div class="precio">&#36; ${precio}/Kg <span>&#36; ${precioInicial}/Kg</span></div>
+                <div class="precio">&#36; ${precioFinal}/Kg <span>&#36; ${precioInicial}/Kg</span></div>
                     <p>${nombre}</p>
             </div>
         <button class="btnAgregar" id="${id}">Ver más</button>
@@ -43,7 +43,7 @@ export const showPopulares = (populares) => {
 export const showModalProducto = (producto, api) => {
     const productModal = document.querySelector('.modal-producto-datos')
     productModal.innerHTML = ""
-    const { nombre, precio, imagen } = producto
+    const { nombre, precioInicial, precioFinal, imagen } = producto
     let cantidad = 1;
     productModal.innerHTML += `
     <div class="imagen-product">
@@ -51,7 +51,7 @@ export const showModalProducto = (producto, api) => {
     </div>
         <div class="informacion-product">
             <span>${nombre}</span>
-            <span>&#36; ${precio}</span>
+            <span>&#36; ${precioFinal}</span>
             <p>Precios con IVA incluido</p>
             <div>
                 <h5 class="cantidad">Selecciona la cantidad que deseas</h5>
