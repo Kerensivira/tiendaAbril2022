@@ -591,7 +591,8 @@ h2{
 .Headline1{
     text-align: center;
     margin-bottom: 7%;
-    font-weight: 800;
+    font-weight: 5%;
+    font-family: Arial;
 
 }
 
@@ -603,6 +604,7 @@ h2{
     margin-top: 4%;
     border-radius: 20px;
     text-align: center;
+    font-family: Arial;
 }
 
 form{
@@ -618,7 +620,7 @@ form{
     font-size: 1rem;
     margin-bottom: 4%;
     margin-left: 2%;
-    border: 2px solid black;
+    border: 2px solid rgba(250, 138, 2, 0.686);
 }
 .campo {
     justify-content: space-around;
@@ -637,7 +639,7 @@ form{
 }
 
 .atras{
-    background-color: #FFC300;
+    background-color: #ff510084;
     padding: 10px;
     margin: auto;
     border-radius: 15px;
@@ -651,13 +653,18 @@ form{
     width: 140px;
     text-align: center
 }
+.atras :hover{
+    background-color: #ff5918cf;
+    border-radius: 15px;
+}
 
 .buttom{
     padding: 2% 4%;
     border-radius: 15px;
     font-size: 1rem;
-    background-color: rgb(2, 1, 0);
+    background-color: rgba(249, 58, 5, 0.549);
     font-weight: 600;
     border: none;
     color: white;
+    margin-left: 2%;
 }

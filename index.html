@@ -52,30 +52,38 @@
                 </ul>
             </nav>
         </header>
-        <!-- Contenedor -->
+        <!-- Parte 2, Contenedor: aqui yace la imagen de portada. -->
+        
         <section id="container">
-            <!-- imagen de portada  -->
+         
             <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
                 style="background-image: url('https://res.cloudinary.com/alexa01020304/image/upload/v1651107530/fruteria_ow4qpn.jpg')">
                 <h1>¡Adquiere todos tus productos favoritos al mejor precio!</h1>
-
             </div>
+
+            <!-- Parte 3, Definir los productos: ofertas y populares -->
+
+            <!-- Productos en oferta -->
             <h2>Ofertas</h2>
-            <!-- Productos oferta  -->
             <section class="ofertas" id="productOferta">
             </section>
+
             <!-- Productos Populares  -->
             <h2>Los más populares</h2>
             <section class="populares" id="productPopular">
             </section>
         </section>
     </div>
-    <!-- modal carrito de compras -->
+
+
+    <!-- Parte 4, Carrito de compras: maquetacion del modal para mi carrito de compras -->
     <section id="modal-car">
+
         <div id="header-modal-car">
             <p>Entregar en <span id="ubicacion-modal">Ubicación</span></p>
             <a href="#cerrar" class="cerrar"><i class="bi bi-x-circle-fill"></i></a>
         </div>
+
         <div class="product-modal" id="producto-car">
 
         </div>
@@ -85,23 +93,29 @@
         </div>
     </section>
 
-    <!-- modal ubicacion -->
+    <!-- Parte 5, Ubicacion: maquetacion del modal para mi la ubicacion -->
     <section id="modal-ubicacion">
+
         <div class="modal-ubicacion-informacion">
             <div id="header-modal-ubicacion">
                 <a href="#cerrar" class="cerrar"><i class="bi bi-x-circle-fill"></i></a>
             </div>
+
             <div id="ubicacion-modal">
                 <span>¿Dónde quieres recibir tu pedido?</span>
-                <p>Para poder ofrecerte productos dentro de tu area, nececitasmos tu ubicación</p>
+                <p>Necesitamos saber tu ubicación para ofrecerte un mejor servicio</p>
             </div>
+
             <div id="ubicaciones">
                 <select name="ubicacion" id="select-ubi">
                 </select>
             </div>
+
+
             <div>
                 <button id="btnUbicacion">Aceptar</button>
             </div>
+
         </div>
     </section>
 

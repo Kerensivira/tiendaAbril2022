@@ -120,8 +120,8 @@ export const showCarro = () => {
     if (productosCar == "") {
         productoComprar.innerHTML += `
         <div class="carritoVacio">
-            <img src="https://res.cloudinary.com/ddgyxfetd/image/upload/v1642375611/Sprint%201/Family_Values_Shopping_kzkp7r.png">
-            <h4>Tu canasta está vacía</h4>
+            <img src="https://res.cloudinary.com/alexa01020304/image/upload/v1651283276/carroVacio_txwthv.png">
+            <h4>Tu carrito se encuentra vacío</h4>
         </div>
         `
     } else {
