@@ -11,10 +11,7 @@ const btnUbicacion = document.getElementById('btnUbicacion')
 const ubicacionModal = document.getElementById('ubicacion-modal')
 const ubicacion = document.getElementById('ubicación')
 import getProducts from './getProduct.js'
-import { showOfertas } from './showCompras.js'
-import { showPopulares } from './showCompras.js'
-import { showCarro } from './showCompras.js'
-import { showModalProducto } from './showCompras.js'
+import { showOfertas, showPopulares, showCarro, showModalProducto } from './showCompras.js'
 
 document.addEventListener('DOMContentLoaded', async () => {
     const ofertas = await getProducts(API_OFERTAS)
