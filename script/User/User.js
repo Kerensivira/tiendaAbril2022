@@ -1,5 +1,6 @@
 
-
+// Se crea una clase para usuario y asì evitamos las innumerables exportaciones 
+//que requerriría el uso de funciones, con esto conseguimos un código más limpio.
 export default class User {
 
     constructor(querys){
