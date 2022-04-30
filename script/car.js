@@ -12,6 +12,8 @@ btnVolver.addEventListener('click', () => {
 const showProductCompra = () => {
     let productosCar = JSON.parse(localStorage.getItem('ProductosCarro')) || []
     const productosCarrito = document.querySelector('.productosCarrito')
+    
+    
     productosCarrito.innerHTML = ""
     productosCar.forEach(element => {
         const { cantidad, imagen, nombre, precioTotal } = element
