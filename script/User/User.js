@@ -90,12 +90,6 @@ export default class User {
                 this.querys.IdUsuario.style.display = 'none'
                 this.querys.LabelIdUsuario.style.display = 'none'
             }
-        } else {
-            Swal.fire(
-                'Oops!',
-                'Debes ingresar un correo para ser buscado',
-                'question'
-            )
-        }
+        } 
     }
 }
