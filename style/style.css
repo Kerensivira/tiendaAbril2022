@@ -11,7 +11,7 @@
     --bg: #FAFAF8;
     --purple: #5E18BB;
 }
-
+                     /* Estilos generales */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -26,65 +26,47 @@ html{
     background-color: var(--bg);
 }
 
-.contenerdor-principal{
-    width: 100%;
+
+                         /* Header */
+
+header {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    padding: 1.3rem 2rem 1.3rem 2rem;
 }
 
-/* estilos header */
+.logo img {
+    width: 100px;
+}
 
-    header{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        background-color: var(--white);
-        margin-bottom: 10px;
-        align-items: center;
-        padding: 2% 4%;  
-    }
+nav ul{
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+    gap: 10px;
+    font-weight: bold;
+}
 
-    header nav ul{
-        list-style: none;
-        cursor: pointer;
-    }
+li button{
+    background-color: var(--malachine);
+    color: var(--white);
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    width: 2.5em;
+    height: auto;
+}
 
-    header .logo {
-        font-family: 'Inter';
-        font-style: italic;
-        font-weight: bold;
-        font-size: 22px;
-        color: var(--scarlet);
-        cursor: pointer;
-    }
+.lgUbicacion{
+    color: var(--scarlet);
+    font-size: 20px;
+}
 
-    header nav li .lgUbicacion{
-        color: var(--scarlet);
-        font-size: 20px;
-        margin-right: 5px;
-    }
 
-    header nav li button{
-        background-color: var(--malachine);
-        color: var(--white);
-        font-size: 18px;
-        border: none;
-        border-radius: 5px;
-        width: 2.5em;
-        height: auto;
-    }
 
-    header nav li button:active{
-        background-color: var(--malachine);
-        opacity: 0.7;
-    }
 
-    header nav li{
-        text-transform: capitalize;
-        font-weight: bold;
-        display: inline;
-        padding: 0 3px;
-    }
-
-/* Productos en oferta y populares */
+                        /* Estilo de Productos */
 .ofertas, .populares{
     margin: 40px;
     padding: 20px;
@@ -152,13 +134,17 @@ h2{
     margin-bottom: 20px;
 }
 
-.btnAgregar:active, #pago:active, .btnAgregarCar:active, #buscarProduct:active, #agregarProduct:active {
+.btnAgregar:active, 
+#pago:active, 
+.btnAgregarCar:active, 
+#buscarProduct:active, 
+#agregarProduct:active {
     background-color: var(--malachine);
     opacity: 0.7;
 }
 
 
-/* modal carrito de compras */
+                        /* Carrito de compras */
 #modal-car{
     background: rgba(255, 255, 255, 0.8);
     min-width: 40%;
@@ -189,10 +175,13 @@ h2{
     padding: 24px 25px;  
 }
 
-#header-modal-car a, #header-modal-ubicacion a, #header-modal-producto a{
+#header-modal-car a, 
+#header-modal-ubicacion a, 
+#header-modal-producto a{
     font-size: 24px;
     color: var(--black);
 }
+
 
 #header-modal-car span{
     font-weight: bold;
@@ -289,7 +278,7 @@ h2{
 }
 
 
-/* modal ubicacion */
+                       /* modal ubicación */
 
 #modal-ubicacion, #modal-producto{
     background: rgba(0,0,0,0.8);
@@ -515,7 +504,7 @@ h2{
     width: 40%;   
 }
 
-/* media queris */
+                        /* media querys */
 
 @media screen and (max-width: 992px){
     #modal-car{

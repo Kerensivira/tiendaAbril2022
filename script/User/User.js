@@ -50,7 +50,7 @@ export default class User {
     
         } else {
             Swal.fire(
-                'Oops!',
+                'Error.',
                 'Debes llenar todos los campos',
                 'question'
             )

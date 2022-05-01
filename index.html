@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- MI CSS -->
+   
+    <!-- MI CSS -->
     <link rel="stylesheet" href="style/style.css">
 
+
+<!-- Netamente bootstrap -->
 <!-- ENLACE PARA USAR LOS ICONOS DE BOOTSTRAP. -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <!-- CSS only -->
@@ -18,50 +21,37 @@
 
 <body>
 
-    <div class="contenerdor-principal">
-
-        <!-- parte 1, header: creación de la cabecera donde se aloja el logo del 
-    establecimiento, carrito y demás opciones. -->
+    <!-- parte 1, header: creación de la cabecera donde se aloja el logo del 
+establecimiento, carrito y demás opciones. -->
+    
         <header>
-            
-            <!-- logo de mi tienda -->
-            <span class="logo">
+            <div class="logo">
                 <img src="https://res.cloudinary.com/alexa01020304/image/upload/v1647483480/tiendita_logo_bgixfc.png"
-                alt="logo" width="50%">
-            </span>
-            
+                alt="logo">
+            </div>
+
             <nav>
                 <ul>
-        <!-- iconos solicitados         -->
-        <ul>
-            <li>
-               <i class="bi bi-geo-alt lgUbicacion"></i><span id="btnGeolocation">Ubicación</span>
-    
-              
-            </li>
-
-            <li>
-               <button  id="btnCarrito" class="bi bi-cart2""></button>
-
-            </li>
-
-            <li>
-               <button id="btnUsuario" class="bi bi-person-circle"></button>
-                </li>
-        </ul>
+                    <li><i class="bi bi-geo-alt lgUbicacion"></i><span id="btnGeolocation">Ubicación</span></li>
+                    <li><button  id="btnCarrito" class="bi bi-cart2""></button></li>
+                    <li><button id="btnUsuario" class="bi bi-person-circle"></button></li>
                 </ul>
             </nav>
         </header>
+  
+
+    
+              
         <!-- Parte 2, Contenedor: aqui yace la imagen de portada. -->
         
         <section id="container">
          
-            <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
-                style="background-image: url('https://res.cloudinary.com/alexa01020304/image/upload/v1651107530/fruteria_ow4qpn.jpg')">
-                <h1>¡Adquiere todos tus productos favoritos al mejor precio!</h1>
-            </div>
+    <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+    style="background-image: url('https://res.cloudinary.com/alexa01020304/image/upload/v1651107530/fruteria_ow4qpn.jpg')">
+    <h1>¡Adquiere todos tus productos favoritos al mejor precio!</h1>
+    </div>
 
-            <!-- Parte 3, Definir los productos: ofertas y populares -->
+        <!-- Parte 3, Definir los productos: ofertas y populares -->
 
             <!-- Productos en oferta -->
             <h2>Ofertas</h2>
@@ -77,23 +67,32 @@
 
 
     <!-- Parte 4, Carrito de compras: maquetacion del modal para mi carrito de compras -->
+    
     <section id="modal-car">
 
         <div id="header-modal-car">
-            <p>Entregar en <span id="ubicacion-modal">Ubicación</span></p>
-            <a href="#cerrar" class="cerrar"><i class="bi bi-x-circle-fill"></i></a>
+            <p>Entregar en 
+            <span id="ubicacion-modal">Ubicación</span>
+           </p>
+
+        <a href="#cerrar" class="cerrar">
+            <i class="bi bi-x-circle-fill"></i>
+        </a>
         </div>
 
         <div class="product-modal" id="producto-car">
 
         </div>
+
         <div class="botones">
             <button id="vaciar">Vaciar canasta</button>
             <button id="pago"></button>
         </div>
+
     </section>
 
-    <!-- Parte 5, Ubicacion: maquetacion del modal para mi la ubicacion -->
+    <!-- Parte 5, Ubicación: maquetación del modal para mi ubicacion -->
+    
     <section id="modal-ubicacion">
 
         <div class="modal-ubicacion-informacion">
@@ -130,11 +129,16 @@
             </div>
         </div>
     </section>
+
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+        <!-- Scripts de SweetAlert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Mis scripts. -->
     <script src="script/main.js" type="module"></script>
     <script src="script/controlStyle.js" type="module"></script>
 </body>
